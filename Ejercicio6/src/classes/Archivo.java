@@ -1,6 +1,15 @@
-package clases;
-
-
+package classes;
+/*
+ * POO 2 Semestre
+ * Facultad de Ingenieria
+ * Departamento de Ciencias de la Computacion
+ * Fecha inicio: 28/10/2023
+ * Fecha final: 30/10/2023
+ *
+ * @author Vianka Castro 23201
+ * 
+ * El propósito de esta clase es guardar y leer en un archivo CSV
+ * */
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -18,7 +27,11 @@ public class Archivo {
 	
 	
 
-	
+	/**
+	 * Imprime el contenido de un archivo CSV proporcionado.
+	 * 
+	 * @param nombreArchivo Nombre del archivo CSV que se desea imprimir.
+	 */
 	public void printArchivo(String nombreArchivo) {
 		try {
 			lector = new BufferedReader(new FileReader(nombreArchivo));
@@ -40,7 +53,12 @@ public class Archivo {
 		}
 	}
 	
-	
+	/**
+	 * Lee un archivo CSV y crea una lista de objetos Dispositivo con la información proporcionada en el archivo.
+	 * 
+	 * @param nombreArchivo Nombre del archivo CSV que se desea leer.
+	 * @return Una ArrayList de objetos Dispositivo creados a partir de la información en el archivo.
+	 */
 	public static ArrayList<Dispositivo> leerArchivo(String nombreArchivo){
 		ArrayList<Dispositivo> dispositivo = new ArrayList<>();
 		
@@ -67,31 +85,29 @@ public class Archivo {
 					int videos = Integer.parseInt(line[11]);
 					String procesador = line[12];
 					String almacenamiento = line[13];
-					Boolean memoria = Boolean.parseBoolean(line[14]);
-					Boolean cuboCargador = Boolean.parseBoolean(line[15]);
-					Boolean tel5G = Boolean.parseBoolean(line[16]);
+					int memoria = Integer.parseInt(line[14]);
+					int cuboCargador = Integer.parseInt(line[15]);
+					int tel5G = Integer.parseInt(line[16]);
 					int encendido = Integer.parseInt(line[17]);
 					int volumen = Integer.parseInt(line[18]);
+					int brillo = Integer.parseInt(line[19]);
 
 					
 					Dispositivo dis = null;
 					switch(line[0].toString()) {
 					case "computadora":
-						dis = new Computadora(marca, modelo, desc, precio, ram, visaCuotas, videos,encendido,volumen);
+						dis = new Computadora(clase,marca, modelo, desc, precio, ram, visaCuotas, videos,encendido,volumen,brillo,tamanio,tipo,velCPU,velGPU);
 						dispositivo.add(dis);
 						break;
 					case "telefono":
-						dis = new Telefono(marca,modelo,desc,precio,ram,visaCuotas,videos,encendido,volumen,procesador,almacenamiento,memoria,cuboCargador,tel5G);
+						dis = new Telefono(clase,marca,modelo,desc,precio,ram,visaCuotas,videos,encendido,volumen,brillo,procesador,almacenamiento,memoria,cuboCargador,tel5G);
 						dispositivo.add(dis);
 						break;
 					}
 					
-					
-					
-					
 				}
 				
-				}
+			}
 			
 		}catch (FileNotFoundException ex) {
 			System.err.println("err "+ex.getMessage());
@@ -107,5 +123,5 @@ public class Archivo {
 		}
 	
 
-	
+
 }

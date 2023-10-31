@@ -1,13 +1,4 @@
 ﻿clase,marca,modelo,desc,precio,ram,visaCuotas,tamanio,tipo,velocidadCPU,velocidadGPU,videos,procesador,almacenamiento,memoria,cuboCargador,5G,encendido,volumen,brillo,estado,intVolumen,intBrillo 
-computadora,HP,pavilion,laptop para juegos,1200.00,16GB,1,"17.3""",HDD,3.0GHz,4GB,5,xx,xx,FALSE,0,1,1,80,40,1,0.1,0.05
-telefono,Apple,iPhone14,ultimo modelo de iphone,1250.00,5GB,1,xx,xx,xx,xx,3,A15Bionic,256GB,TRUE,0,1,0,60,70,0,0.02,0.03
-telefono,Xiaomi,Mi 11,Smartphone con cámara avanzada,800.00,12GB,1,xx,xx,xx,xx,3,Snapdragon 888,256GB,TRUE,1,1,1,75,60,1,0.02,0.03
-,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,,,,,
+computadora,HP,pavilion,laptop para juegos,1200,16GB,1,"17.3""",HDD,3.0GHz,4GB,5,xx,xx,0,0,1,1,80,40,1,0.1,0.05
+telefono,Apple,iPhone14,ultimo modelo de iphone,1250,5GB,1,xx,xx,xx,xx,3,A15Bionic,256GB,1,0,1,0,60,70,0,0.02,0.03
+telefono,Xiaomi,Mi 11,Smartphone con cámara avanzada,800,12GB,1,xx,xx,xx,xx,3,Snapdragon 888,256GB,1,1,1,1,75,60,1,0.02,0.03
